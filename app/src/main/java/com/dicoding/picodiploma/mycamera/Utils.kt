@@ -52,7 +52,7 @@ fun createCustomTempFile(context: Context): File {
     return File.createTempFile(timeStamp, ".jpg", filesDir)
 }
 
-fun UriToFile(imageUrl: Uri, context: Context): File {
+fun uriToFile(imageUrl: Uri, context: Context): File {
     val myFile = createCustomTempFile(context)
     val inputStream = context.contentResolver.openInputStream(imageUrl) as InputStream
     val outputStream = FileOutputStream(myFile)
