@@ -114,7 +114,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun uploadImage() {
         currentImageUri?.let { uri ->
-            val imageFile = uriToFile(uri, this)
+            val imageFile = uriToFile(uri, this).reduceFileImage()
             Log.d("Image Classification File", "showImage : ${imageFile.path}")
             showLoading(true)
 
